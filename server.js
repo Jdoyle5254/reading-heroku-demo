@@ -26,6 +26,12 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   mongoose.connect("mongodb://localhost/reactreadinglist");
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  };
 }
 
 
