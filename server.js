@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
     useFindAndModify: false
   });
 } else {
-  mongoose.connect("mongodb://localhost/reactreadinglist");
+  mongoose.connect("mongodb://localhost/reactreadinglist"),
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
