@@ -26,13 +26,15 @@ if (process.env.NODE_ENV === "production") {
     useFindAndModify: false
   });
 } else {
-  mongoose.connect("mongodb://localhost/reactreadinglist"),
+  mongoose.connect("mongodb://localhost/reactreadinglist",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
-  };
+  }) .then(()=>{
+    console.log("DB Connected Successfully");
+});
 }
 
 
